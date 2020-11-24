@@ -27,3 +27,42 @@ $var = 5;
 echo $var . '<br>';
 $var = '文字列に上書き';
 echo $var . '<br>';
+
+// 練習6
+$color = 'red';
+echo "My ${color} car was stolen.";
+echo '<br>';
+
+// 練習7
+$var = 11;
+if ($var > 10) {
+    echo '10より大きい数値です。';
+}
+echo '<br>';
+
+// 練習8
+$var = 23;
+if ($var >= 20 && $var < 30) {
+    echo '20代です。';
+}
+echo '<br>';
+
+// 練習9
+$var = 32;
+if ($var >= 20 && $var < 30) {
+    echo '20代です。';
+} else {
+    echo '20代ではありません。';
+}
+echo '<br>';
+
+// 練習10
+$var = 19;
+if ($var >= 20 && $var < 30) {
+    echo '20代です。';
+} elseif ($var >= 30 && $var < 40) {
+    echo '30代です。';
+} else {
+    echo '20代または30代ではありません。';
+}
+echo '<br>';
