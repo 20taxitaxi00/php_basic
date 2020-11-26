@@ -49,6 +49,7 @@ echo 'ーーー練習6ーーー'. '<br>';
 $color = 'red';
 echo "My ${color} car was stolen." . '<br>';
 
+// 制御文if文
 // 練習7
 echo 'ーーー練習7ーーー'. '<br>';
 $var = 11;
@@ -56,7 +57,7 @@ if ($var > 10) {
     echo '10より大きい数値です。' . '<br>';
 }
 
-// 練習8
+// 練習8 （論理積）
 echo 'ーーー練習8ーーー'. '<br>';
 $var = 23;
 if ($var >= 20 && $var < 30) {
@@ -73,7 +74,8 @@ if ($var >= 20 && $var < 30) {
 }
 echo '<br>';
 
-// 練習10
+// 練習10 
+// 条件A || 条件B　条件Aか条件Bを満たしていたら　（論理和）
 echo 'ーーー練習10ーーー'. '<br>';
 $var = 19;
 if ($var >= 20 && $var < 30) {
@@ -84,6 +86,22 @@ if ($var >= 20 && $var < 30) {
     echo '20代または30代ではありません。';
 }
 echo '<br>';
+
+// 練習問題　
+// 10代、20代、30代の判定ができるif文　「〇〇さんは、○代です」
+$friends = ['name' => 'seedくん', 'area' => 'セブ島', 'gender' => 1, 'age' => 13,];
+$friends['name'] = 'リオさん';
+$friends['age'] = 24;
+$var = $friends['age'];
+if ($var >=10 && $var < 20) {
+    echo $friends['name'] . 'は10代です。' . '<br>';
+} elseif ($var >=20 && $var < 30) {
+    echo $friends['name'] . 'は20代です。' . '<br>';
+} elseif ($var >=30 && $$var < 40) {
+    echo $friends['name'] . 'は30代です。' . '<br>';
+} else {
+    echo $friends['name'] . 'は40代以上です。' . '<br>';
+}
 
 // 練習11
 echo 'ーーー練習11ーーー'. '<br>';
@@ -135,6 +153,27 @@ $fruits = ['apple' => 'りんご', 'orange' => 'みかん', 'banana' => 'ばな�
 foreach ($fruits as $key => $value) {
     echo $key . '=' . $value . '<br>';
 }
+
+// 連想配列
+echo '------ 連想配列 ------' . '<br>';
+$friends = ['friend_name' => 'seedくん', 'area' => 'セブ島', 'gender' => 1, 'age' => 3,];
+echo $friends['friend_name'] . '<br>';
+// 値を追加する
+$friends['hobby'] = 'programming';
+// 練習問題
+// $friends($friends2)にペアの方の情報を入力し、hobbyを表示
+$friends = ['friend_name' => 'リオさん', 'area' => '沖縄', 'gender' => 1, 'age' => 24, 'hobby' => 'バスケ'];
+echo $friends['hobby'] . '<br>';
+//  チャレンジャー問題
+// 情報を使って文章を組み立ててみましょう
+echo $friends['friend_name'] . 'の趣味は' . $friends['hobby'] . 'です。' . '<br>';
+// 二次元配列の場合
+$teacher1 = ['name' => 'かん先生', 'area' => '香川', 'age' => 24,];
+$teacher2 = ['name' => 'いけあつ先生', 'area' => '千葉', 'age' => 29,];
+// 先生の情報が二次元配列になる
+$teachers = [$teacher1,$teacher2];
+echo $teachers[0]['name'] . '<br>';
+
 
 // 演習問題1
 // 問題1
