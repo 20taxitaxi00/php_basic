@@ -135,6 +135,13 @@ for ($i = 0; $i < 10; $i++) {
     echo $i . '<br>';
 }
 
+// 練習問題
+$fruits = ['banana', 'mango', 'apple', 'watermelon'];
+// 配列.length(JavaScript)とcount(配列)は同じ要素数を取得する
+for ($i = 0; $i < count($fruits); $i++) {
+    echo $fruits[$i] . '<br>';
+}
+
 // 練習14
 // 配列の要素数を取得　→ count(配列) 
 // 配列の中身を確認　→　var_dump(配列)
@@ -142,6 +149,7 @@ echo 'ーーー練習14ーーー'. '<br>';
 $fruits = ['りんご', 'みかん', 'ばなな'];
 $fruits[] = 'なし';
 echo $fruits[count($fruits) - 1] . '<br>';
+// 配列の要素数分だけ繰り返す(配列専用の繰り返し文)
 foreach ($fruits as $fruit) {
     echo $fruit . '<br>';
 }
@@ -152,6 +160,10 @@ $fruits = ['apple' => 'りんご', 'orange' => 'みかん', 'banana' => 'ばな�
 
 foreach ($fruits as $key => $value) {
     echo $key . '=' . $value . '<br>';
+
+    if ($key == 'orange') {
+        echo $key . 'は' . $value . 'です。' . '<br>'; 
+    }
 }
 
 // 連想配列
